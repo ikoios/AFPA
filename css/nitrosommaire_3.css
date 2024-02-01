@@ -1,0 +1,16 @@
+body {
+    margin-top: 20px;
+    background-color: #AAFFAA;
+    border-style: dashed 3px #555555;
+}
+div a {
+    /* display: none; */
+}
+.sommaire {
+    position: fixed;
+    width: 100%;
+    border: none;
+}
+ol {
+    display: flex;
+}

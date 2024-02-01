@@ -1,0 +1,98 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+.lilist ol {
+    padding: 0%;
+    margin: 0%;
+}
+.li h2 {
+    text-decoration: underline;
+}
+.li h3 {
+    font-style: italic;
+}
+p::first-letter {
+    text-align: justify;
+    margin-left: 15px;
+}
+.li ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    position: fixed;
+}
+.li li {
+    width: 14.2%;
+    list-style: none;
+    text-align: center;
+    box-shadow: 5px 3px 4px;
+    background-color: white;
+}
+.li li a:hover {
+    /* border: solid; */
+    border-bottom: solid 1px red;
+}
+.li li a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+.textli {
+    padding: 5%;
+}
+.ol .terme li {
+    font-variant: small-caps;
+}
+.ol .terme li {
+    list-style: none;
+}
+.ol .terme ul {
+    font-style: italic;
+}
+.ol li {
+    list-style: lower-greek;
+}
+.ol li li {
+    list-style: circle;
+}
+.ol h4, .ol p {
+    line-height: 0%;
+}
+table tr th {
+    border: solid 0.5px;
+    width: 50px;
+    height: 50px;
+}
+td {
+    border: solid 0.5px;
+}
+.form {
+    border: solid 0.5px;
+    width: 40rem;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+fieldset label {
+    display: flex;
+    flex-direction: column;
+}
+select {
+    width: 4rem;
+}
+fieldset input {
+    width: 10rem;
+}
+.competence label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 0%;
+}
+.competence input {
+    width: auto;
+}

@@ -1,0 +1,7 @@
+ul li {
+    list-style-type: circle;
+}
+
+table, th, td, tr {
+    border: solid 1px;
+}

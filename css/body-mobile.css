@@ -1,0 +1,161 @@
+@media screen and (max-width: 768px) {
+    
+    * {
+        margin: 0%;
+        padding: 0%;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    body {
+        /* border: solid white; */
+        background-color: #17171E;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    .section1 {
+        /* border: solid white; */
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: 0.75;
+        width: 25.5rem;
+        margin-left: 0.9%;
+    }
+    .seo {
+        /* border: solid white; */
+        width: 25rem;
+    }
+    .best-seo {
+        /* border: solid white; */
+        width: auto;
+        padding-left: 0%;
+        color: white;
+        align-items: center;
+    }
+    h1 {
+        /* border: solid white; */
+        width: 24.6rem;
+        height: 10rem;
+        padding-top: 10%;
+        text-align: center;
+        font-size: 3.1rem;
+    }
+    .best-seo p {
+        /* border: solid white; */
+        text-align: center;
+        width: 24.5rem;
+        height: 14rem;
+    }
+    .button {
+        /* border: solid white; */
+        display: flex;
+        align-content: space-between;
+        width: 25rem;
+    }
+    .button1, .button2 {
+        /* border: solid white; */
+        height: 4rem;
+        width: 12rem;
+    }
+    .section2 {
+        /* border: solid white; */
+        width: 25.5rem;
+        height: 70rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .section3 {
+        border: solid white;
+        width: 19rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .screen {
+        border: solid white;
+        width: auto;
+    }
+    .buisness {
+        border: solid white;
+        display: flex;
+        text-align: center;
+        width: auto;
+        height: 27rem;
+        padding-left: 0%;
+    }
+    .buisness h2 {
+        border: solid white;
+        width: auto;
+        height: 5rem;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .buisness p {
+        border: solid white;
+        text-align: center;
+        width: 24rem;
+        height: 14rem;
+        padding-left: 1%;
+    }
+    .buisness .button {
+        display: flex;
+        justify-content: center;
+    }
+    .section4 {
+        border: solid white;
+        width: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .like {
+        border: solid white;
+        width: auto;
+    }
+    .sucess {
+        border: solid white;
+        display: flex;
+        text-align: center;
+        width: auto;
+        height: 27rem;
+        padding-left: 0%;
+    }
+    .sucess h2 {
+        border: solid white;
+        width: auto;
+        height: 5rem;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .sucess p {
+        border: solid white;
+        text-align: center;
+        width: 24rem;
+        height: 14rem;
+        padding-left: 1%;
+    }
+    .sucess .button {
+        display: flex;
+        justify-content: center;
+    }
+    .section5 {
+        border: solid white;
+        width: 24rem;
+    }
+    .section5 figure {
+        border: solid white;
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        height: 30rem;
+    }
+    .section6 {
+        border: solid white;
+        width: 15rem;
+
+    }
+}

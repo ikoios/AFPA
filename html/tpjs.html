@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPJS</title>
+    <link rel="stylesheet" href="/css/tpjs.css">
+</head>
+<body id="body" onload="alert(`Page chargée`)"  onkeypress="alert(`Attention !`)">
+    <p id="parag1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+    </p>
+    <button onclick="changer_style()">Changer Style</button><br>
+    <label for="fact">Entrer une valeur
+        <input type="number" id="number">
+        <input type="text" id="cumul" disabled>
+    </label><br>
+    <button onclick="factoriel()">Calculer</button>
+    <label for="multipliczation">Entrer un nombre
+        <input type="number" id="multi">
+    </label>
+    <button onclick="doubleFonction1()">Afficher</button>
+    <div id="mtab"></div>
+    <button onclick="doubleFonction2()">Afficher les tables de multiplication</button><br>
+    <div id="multitab"></div>
+    <img src="/image/logo-firefox.png" alt="logo google chrome" width="150px" id="img" onmouseover="alert(`Logo Mozzila Firefox`)"><br>
+    <button onclick="alert(`Click !`)">Alert!!!</button>
+    <button id="background" onclick="background()">Changer le fond</button>
+    <button onclick="removeBackground()">Remove</button><br>
+    <img id="image" src="/tp5/image/background.png" width="150px" alt="" onmouseover="changeImg()" onmouseleave="changeImg2()"><br>
+    <script src="/js/tpjs.js"></script>
+</body>
+</html>

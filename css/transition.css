@@ -1,0 +1,10 @@
+#d {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    transition: font-size 2s, color 1s;*
+}
+#d:hover {
+    font-size: 25rem;
+    color: green;
+}
