@@ -8,7 +8,7 @@ export default function Banner() {
   //
   return (
     <>
-      <div className="p-3 border-bottom border-2 border-black d-flex align-items-center flex-wrap justify-content-start">
+      <div className="p-3 border-bottom border-2 border-black d-flex align-items-center flex-wrap justify-content-center">
         <div className="ms-5">
           <Logo />
         </div>

@@ -1,33 +1,51 @@
-import { Container, Button } from "react-bootstrap";
 import { plantList } from "../../Datas/PlantList";
 import PlantItem from "./PlantItem";
-import PlantePlante from "./planteplante";
 //
-export default function ShoppingList({ cart, updateCart }) {
-  const categories = plantList.reduce(
-    (acc, plante) =>
-      acc.includes(plante.category) ? acc : acc.concat(plante.category),
-    []
-  );
-
+export default function ShoppingList(props) {
+  // const categories = plantList.reduce(
+  //   (acc, plante) =>
+  //     acc.includes(plante.category) ? acc : acc.concat(plante.category),
+  //   []
+  // );
+  //
   return (
-    <div >
-      <ul>
-        {categories.map((cat) => (
-          <li key={cat}>{cat}</li>
-        ))}
-      </ul>
-      <ul className="d-flex flex-wrap p-5 justify-content-end">
-        {plantList.map((plante) => (
+    <div>
+      <ul className="d-flex flex-wrap p-5 justify-content-evenly">
+        {plantList.map((plant) => (
           <>
-            <PlantItem
-            cart={cart}
-            updateCart={updateCart}
-            props={plante}
-            />
+            {console.log(!props.categorie)}
+            <PlantItem props={props} plant={plant} />
           </>
         ))}
       </ul>
     </div>
   );
 }
+
+// import { plantList } from "../../Datas/PlantList";
+// import PlantItem from "./PlantItem";
+// //
+// export default function ShoppingList(props) {
+//   // const categories = plantList.reduce(
+//   //   (acc, plante) =>
+//   //     acc.includes(plante.category) ? acc : acc.concat(plante.category),
+//   //   []
+//   // );
+//   //
+//   return (
+//     <div>
+//       <ul className="d-flex flex-wrap p-5 justify-content-evenly">
+//         {plantList.map((plant) =>{
+//           // if((props.categorie !== undefined || props.categorie !== null) && (props.categorie === plant.category || props.categorie === "all")) {(
+//             <>
+//               <PlantItem props={props} plant={plant} />
+//             </>
+//           // )}else{
+//           //   (<></>)
+//           // }
+//         }
+//         )}
+//       </ul>
+//     </div>
+//   );
+// }
