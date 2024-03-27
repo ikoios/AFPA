@@ -74,7 +74,7 @@ class DataBase
             $troupe = $statement->fetchAll(PDO::FETCH_ASSOC);
             foreach ($troupe as $musiciens) {
                 $id = $musiciens["id"];
-                echo "<div id='" . $musiciens["id"] . "'>";
+                echo "<div id='div" . $musiciens["id"] . "'>";
                 echo "id : " . $musiciens["id"] . "<br>";
                 echo "nom : " . $musiciens["nom"] . "<br>";
                 echo "age : " . $musiciens["age"] . "<br>";
@@ -82,7 +82,7 @@ class DataBase
                 if ($musiciens["voix"] != "aucune") {
                     echo "voix : " . $musiciens["voix"] . "<br>";
                 }
-                echo "<button id='" . $id . "' onClick='showForm()'>Modifier</button>";
+                echo "<button id='" . $id . "' onClick='showForm(this.id)'>Modifier</button>";
                 echo "<div id='" . $id . "'></div>";
                 echo "</div>";
             }

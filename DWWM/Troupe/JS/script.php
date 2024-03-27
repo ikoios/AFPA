@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,41 +7,57 @@
     <title>Script</title>
 </head>
 
-<body>
-    <?php
-    $host = "localhost";
-    $db = "troupe";
-    $connection = new PDO("mysql:host=$host; dbname=$db", "root", "");
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT * FROM musiciens";
-    $statement = $connection->prepare($query);
-    $statement->execute();
-    $troupe = $statement->fetchAll(PDO::FETCH_ASSOC);
-    ?>
+<body> -->
+<!-- balise php ouvrante  -->
+<!-- $host = "localhost";
+$db = "troupe";
+$connection = new PDO("mysql:host=$host; dbname=$db", "root", "");
+$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$query = "SELECT * FROM musiciens";
+$statement = $connection->prepare($query);
+$statement->execute();
+$troupe = $statement->fetchAll(PDO::FETCH_ASSOC); -->
+<!-- balise php fermante -->
+
     <script>
-        let id;
-        for (let i = 1; i <= <?php echo json_encode($troupe); ?>.length; i++) {
-            id = i;
-            console.log(id);
-            <?php
-            $id;
-            foreach ($troupe as $musiciens) {
-                $id = $musiciens["id"];
-            }
-            ?>
-            const modif = document.querySelector("button");
-            const card = document.getElementById(id);
-            const formModifDiv = document.createElement("div");
-            // 
-            function showForm(id) {
-                if (formModifDiv.classList.contains("open")) {
-                    formModifDiv.innerHTML = "";
-                    formModifDiv.classList.remove("open");
+        // let id;
+        // for (let i = 1; i <= 
+        // balise php ouvrante 
+        // echo json_encode($troupe); 
+        // ?>
+        // .length; i++) {
+        //     id = i;
+        //     console.log(id);
+     // balise php ouvrante 
+        //     $id;
+        //     foreach ($troupe as $musiciens) {
+        //         $id = $musiciens["id"];
+        //     }
+        //     ?>
+        // 
+        function showForm(id) {
+                let idCible='div'+id;
+                let idform='form'+id;
+                console.log(idCible);
+                const modif = document.querySelector("button");
+                const card = document.getElementById(idCible);
+                const formModifDiv = document.createElement("div");
+                const formActiv = document.getElementById(idform);
+                console.log(formActiv); 
+                // formModifDiv.setAttribute('id',idform)
+                // 
+                // if (formModifDiv.classList.contains("open")) {
+                //     formModifDiv.innerHTML = "";
+                //     formModifDiv.classList.remove("open");
+                if(formActiv){
+                    formActiv.parentNode.removeChild(formActiv)
+                    // formActiv.classList.remove("open");
                 } else {
                     formModifDiv.classList.add("open");
                     // 
                     let formModif = document.createElement("form");
                     formModif.setAttribute("method", "post");
+                    formModif.setAttribute("id", idform);
                     // 
                     let formModifLabelName = document.createElement("label");
                     formModifLabelName.textContent = "Nom: ";
@@ -138,8 +154,8 @@
                     formModifSelectVoice.appendChild(formModifOptionVoice8);
                 }
             }
-        }
+        // }
     </script>
-</body>
+<!-- </body>
 
-</html>
+</html> -->
