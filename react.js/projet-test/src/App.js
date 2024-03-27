@@ -12,7 +12,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 export default function App() {
   const [cart, updateCart] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [categorie, setCat] = useState('')
+  const [categorie, setCat] = useState('');
   return (
     <div>
       <Banner />
@@ -29,7 +29,7 @@ export default function App() {
                 <Cart cart={cart} updateCart={updateCart} isOpen={isOpen} setIsOpen={setIsOpen} />
               </Col>
               <Col md={10}>
-                <ShoppingList cart={cart} updateCart={updateCart} categorie={categorie} setCat={setCat} />
+                <ShoppingList cart={cart} updateCart={updateCart} isOpen={isOpen} setIsOpen={setIsOpen} categorie={categorie} setCat={setCat} />
               </Col>
             </>
             :

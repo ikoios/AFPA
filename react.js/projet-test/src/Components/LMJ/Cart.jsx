@@ -19,7 +19,9 @@ export default function Cart(props) {
     >
       <CloseButton variant="white" onClick={() => props.setIsOpen(false)} />
       <h2 className="d-flex justify-content-center">Panier</h2>
-      <ul>{/* {JSON.stringify(props.cart)} */}</ul>
+      {/* <ul>
+        {JSON.stringify(props.cart)}
+      </ul> */}
       <h3>Total : {total}€</h3>
       <Button
         onClick={() => props.updateCart([])}

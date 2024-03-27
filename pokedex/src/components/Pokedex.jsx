@@ -1,17 +1,45 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cards from "./Cards";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import NavBar from "./NavBar";
 //
-export default function Pokedex() {
-  const [pokemon, setPokemon] = useState([]);
+const Pokedex = ({ pokemon, setPokemon, value, filterList, filterField }) => {
+  const [like, setLike] = useState(
+    JSON.parse(localStorage.getItem("like")) || []
+  );
   //
+  const handleLike = (pokemon) => {
+    const pokeId = [...like];
+    const findLike = pokeId.find((f) => f.id === pokemon.id);
+    //
+    if (!findLike) {
+      pokeId.push(pokemon);
+      setLike(pokeId);
+      localStorage.setItem("like", JSON.stringify(pokeId));
+      console.log(pokeId);
+    }
+  };
+//
   useEffect(() => {
-     axios
-        .get(`https://pokebuildapi.fr/api/v1/pokemon/limit/100`)
+    if (value) {
+      axios
+        .get(`https://pokebuildapi.fr/api/v1/pokemon/generation/1`)
         .then((res) => {
-          console.log(res);
           setPokemon(res.data);
         });
-  }, []);
-  return <Cards pokemon={pokemon} />;
-}
+    } else {
+      setPokemon(filterList());
+    }
+  }, [value]);
+  return (
+    <>
+      {/* <NavBar /> */}
+      {pokemon.map((poke) => (
+        <Cards poke={poke} handleLike={handleLike} />
+      ))}
+    </>
+  );
+};
+export default Pokedex;

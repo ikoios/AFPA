@@ -13,13 +13,12 @@ export default function Categorie(props) {
       variant="success"
       title="Catégories"
       className="d-flex justify-content-center pt-5"
-      value={props.categorie}
     >
       {categories.map((cat) => (
         <Dropdown.Item
           key={cat}
           value={cat}
-          onClick={(e) => props.setCat(e.target.value)}
+          onClick={() => props.setCat(cat)}
         >
           {cat}
         </Dropdown.Item>
