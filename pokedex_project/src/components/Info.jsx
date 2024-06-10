@@ -30,16 +30,20 @@ export default function Info({ poke, show, setShow }) {
         <Modal.Body className="text-center">
           <Container>
             {type.map((types) => (
-              <span>
-
-                {types.name}
+              <div className="border-bottom">
+                <h3 className="mt-2">{types.name}</h3>
                 <img src={types.image} alt="" />
-              </span>
+              </div>
             ))}
           </Container>
-          HP:{poke.stats.HP} Atk:{poke.stats.attack} Def:{poke.stats.defense}{" "}
-          SpeAtk:{poke.stats.special_attack} SpeDef:{poke.stats.special_defense}{" "}
-          Speed:{poke.stats.speed}
+          <h5 className="pt-4">
+            HP: {poke.stats.HP} | Atk: {poke.stats.attack} | Def:{" "}
+            {poke.stats.defense}{" "}
+          </h5>
+          <h5>
+            SpeAtk: {poke.stats.special_attack} | SpeDef:{" "}
+            {poke.stats.special_defense} | Speed: {poke.stats.speed}
+          </h5>
         </Modal.Body>
         <Modal.Footer></Modal.Footer>
       </Modal>

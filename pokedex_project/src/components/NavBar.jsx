@@ -6,34 +6,29 @@ import { useEffect, useState } from "react";
 //
 const NavBar = ({ setPokemon, filterList, setValue }) => {
   //
-//     useEffect(() => {
-//       if (value) {
-//       }
-//   }, []);
-  
-  //
   const handleKey = (e) => {
-    // if (e.key === "Enter") {
     e.preventDefault();
     setValue(e.target.value);
     setPokemon(filterList());
-    // }
   };
   //
   return (
-    <Navbar>
+    <Navbar className="d-flex justify-content-around mb-4">
+      <Navbar.Brand><img src="../../Assets/pokedex_logo.png" alt="logo pokedex" /></Navbar.Brand>
       <Link to="/" element={<Pokedex />}>
-        <Button className="btn-danger">Pokedex</Button>
+        <Button className="btn-danger">
+          <h4>Pokedex</h4>
+        </Button>
       </Link>
       <Link to="/favoris" element={<Favorites />}>
-        <Button className="btn-danger">Favoris</Button>
+        <Button className="btn-danger">
+          <h4>Favoris</h4>
+        </Button>
       </Link>
       <Form>
         <Form.Control
           placeholder="Recherche"
-          //   onKeyDown={handleKey}
           onChange={handleKey}
-          //   value={value}
         ></Form.Control>
       </Form>
     </Navbar>

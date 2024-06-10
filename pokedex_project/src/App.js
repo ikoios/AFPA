@@ -5,17 +5,20 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import { useState } from 'react';
 //
-function App() {x
+function App() {
   const [pokemon, setPokemon] = useState([]);
   const [value, setValue] = useState("");
   console.log(pokemon)
   //
+  const filterField = (item) => {
+    return item.name.toString();
+  };
   const filterList = () => {
     return pokemon.filter((item) =>
-    filterField(item).toLowerCase().includes(value.toLocaleLowerCase())
+      filterField(item).toLowerCase().includes(value.toLocaleLowerCase())
     );
-};
-//
+  };
+  //
   return (
     <BrowserRouter>
       <NavBar pokemon={pokemon} setPokemon={setPokemon} filterField={(item) => item.name.toString()} value={value} setValue={setValue} filterList={filterList} />
