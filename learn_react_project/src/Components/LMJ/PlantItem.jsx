@@ -2,22 +2,21 @@ import CareScale from "./CareScale";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import { plantList } from "../../Datas/PlantList";
-//
-export default function PlantePlante({ props }) {
+
+export default function PlantItem({ props, cart, updateCart }) {
   var nameFlamme = props.name;
   props.isBestSale ? (nameFlamme += `🔥`) : (nameFlamme += "");
   //
-  function addToCart(name, price) {
-    const selectedPlant = props.cart.find((plant) => plant.name === name);
+  function addToCart(id, name, price) {
+    let selectedPlant = cart.find(plant => plant.id === id);
     if (selectedPlant) {
-      const plantFiltered = props.cart.filter((plant) => plant.name !== name)
-      props.updateCart([
-        ...plantFiltered,
-        { name, price, amount: selectedPlant.amount + 1 },
-      ]);
+      let updatedCart = cart.map(
+        plant =>
+          plant.id === id ? { ...plant, amount: plant.amount + 1 } : plant
+      );
+      updateCart(updatedCart);
     } else {
-      props.updateCart([...props.cart, { name, price, amount: 1 }]);
+      updateCart([...cart, { id, name, price, amount: 1 }]);
     }
   }
   return (
@@ -33,7 +32,9 @@ export default function PlantePlante({ props }) {
           style={{ height: "25rem" }}
         />
         <Container className="d-flex flex-wrap mt-1">
-          <Card.Title>{nameFlamme}</Card.Title>
+          <Card.Title>
+            {nameFlamme}
+          </Card.Title>
           <div className="d-flex justify-content-end w-100">
             <CareScale careType="water" scaleValue={props.water} />
             <CareScale careType="light" scaleValue={props.light} />
@@ -43,7 +44,7 @@ export default function PlantePlante({ props }) {
       <Container className="d-flex  justify-content-center pb-1">
         <Button
           variant="success"
-          onClick={(plant) => addToCart(plant.name, plant.price)}
+          onClick={() => addToCart(props.id, props.name, props.price)}
         >
           Ajouter
         </Button>

@@ -1,17 +1,14 @@
-import { Container, Button } from "react-bootstrap";
 import { plantList } from "../../Datas/PlantList";
 import PlantItem from "./PlantItem";
-import PlantePlante from "./planteplante";
-//
+
 export default function ShoppingList({ cart, updateCart }) {
   const categories = plantList.reduce(
     (acc, plante) =>
       acc.includes(plante.category) ? acc : acc.concat(plante.category),
     []
   );
-
   return (
-    <div >
+    <div>
       <ul>
         {categories.map((cat) => (
           <li key={cat}>{cat}</li>
