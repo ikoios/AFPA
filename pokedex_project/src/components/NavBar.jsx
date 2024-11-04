@@ -6,15 +6,17 @@ import { useEffect, useState } from "react";
 //
 const NavBar = ({ setPokemon, filterList, setValue }) => {
   //
-  const handleKey = (e) => {
-    e.preventDefault();
-    setValue(e.target.value);
-    setPokemon(filterList());
+  const handleKey = e => {
+      // e.preventDefault();
+      setValue(e.target.value);
+      setPokemon(filterList());
   };
   //
   return (
     <Navbar className="d-flex justify-content-around mb-4">
-      <Navbar.Brand><img src="../../Assets/pokedex_logo.png" alt="logo pokedex" /></Navbar.Brand>
+      <Navbar.Brand>
+        <img src="../../Assets/pokedex_logo.png" alt="logo pokedex" />
+      </Navbar.Brand>
       <Link to="/" element={<Pokedex />}>
         <Button className="btn-danger">
           <h4>Pokedex</h4>
@@ -26,10 +28,7 @@ const NavBar = ({ setPokemon, filterList, setValue }) => {
         </Button>
       </Link>
       <Form>
-        <Form.Control
-          placeholder="Recherche"
-          onChange={handleKey}
-        ></Form.Control>
+        <Form.Control placeholder="Recherche" onChange={handleKey} />
       </Form>
     </Navbar>
   );

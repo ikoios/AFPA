@@ -2,6 +2,7 @@ import CareScale from "./CareScale";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import "../Css/plantItem.css";
 
 export default function PlantItem({ props, cart, updateCart }) {
   var nameFlamme = props.name;
@@ -20,7 +21,7 @@ export default function PlantItem({ props, cart, updateCart }) {
     }
   }
   return (
-    <Card className="w-25 m-5 border-3 rounded-4 border-success">
+    <Card className="m-5 border-3 rounded-4 border-success">
       <Card.Body
         key={props.id}
         className="list-group-item disabled d-flex flex-column p-1"

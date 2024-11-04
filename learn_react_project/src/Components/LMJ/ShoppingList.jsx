@@ -14,7 +14,7 @@ export default function ShoppingList({ cart, updateCart }) {
 
   return (
     <div>
-    <Container className="d-flex justify-content-center">
+    <Container className="d-flex justify-content-center mt-5">
       <Form.Select value={activeCategory} onChange={(e) => setActiveCategory(e.target.value)} className="w-25 text-center">
       <option value={''}>Catégories</option>
         {categories.map((cat) => (
@@ -23,7 +23,7 @@ export default function ShoppingList({ cart, updateCart }) {
       </Form.Select>
     </Container>
 
-      <ul className="d-flex flex-wrap p-5 justify-content-end">
+      <ul className="d-flex flex-wrap p-5 justify-content-evenly">
         {plantList.map((plante) => (
           !activeCategory || activeCategory === plante.category ? (
           <>

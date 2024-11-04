@@ -6,22 +6,22 @@ export default function Info({ poke, show, setShow }) {
   const handleClose = () => setShow(!false);
   //
   const type = poke.apiTypes;
+  console.log(type);
   //
   return (
     <>
       <Modal
+        key={poke.id}
         show={show}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-        className="w-100"
       >
         <Modal.Header
-          key={poke.id}
           className="d-flex justify-content-center flex-wrap"
         >
-          <Container className="border d-flex justify-content-center">
-            <img src={poke.image} alt="" />
+          <Container className=" d-flex justify-content-center">
+            <img src={poke.image} alt="" className="w-75" />
           </Container>
           <Modal.Title>
             #{poke.pokedexId} {poke.name}
@@ -30,9 +30,9 @@ export default function Info({ poke, show, setShow }) {
         <Modal.Body className="text-center">
           <Container>
             {type.map((types) => (
-              <div className="border-bottom">
-                <h3 className="mt-2">{types.name}</h3>
-                <img src={types.image} alt="" />
+              <div key={types.id} className="border-bottom">
+                <h3 key={types.id} className="mt-2">{types.name}</h3>
+                <img key={type.id} src={types.image} alt="" className="w-25" />
               </div>
             ))}
           </Container>
