@@ -1,0 +1,35 @@
+Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.divNames {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 3vh;
+}
+
+label {
+    color: red;
+}
+
+.divButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.divButton Button {
+    background: rgb(163, 130, 108);
+    border: none;
+    margin-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 5rem;
+}
+
+.divButton Button:hover {
+    background: rgb(163, 120, 98);
+    border: none;
+}

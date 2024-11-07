@@ -1,17 +1,22 @@
+import { Container } from "react-bootstrap";
 import TextFormHome from "./TextFormHome";
 import FormHome from "./FormHome";
+import "../css/sectionFormHome.css";
 
-const SectionFormHome = ({ slideInElem, slideInElemDelay }) => {
+const SectionFormHome = ({ datas, slideInElem, slideInElemDelay }) => {
   return (
-    <div className="container" style={{ marginTop: "30vh" }}>
-      <div className="row d-flex justify-content-between align-items-start">
+    <Container className="containerSectionFormHome">
+      <div className="divSectionFormHome">
         <TextFormHome
+          datas={datas}
           slideInElem={slideInElem}
           slideInElemDelay={slideInElemDelay}
         />
-        <FormHome />
+        <div className="divFormHome">
+          <FormHome />
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

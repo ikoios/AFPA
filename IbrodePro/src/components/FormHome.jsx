@@ -1,7 +1,8 @@
 import * as formik from "formik";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import * as yup from "yup";
 import ButtonList from "./ButtonList";
+import "../css/formHome.css";
 
 const FormHome = () => {
   const { Formik } = formik;
@@ -27,18 +28,10 @@ const FormHome = () => {
       }}
     >
       {({ handleSubmit, handleChange, values, errors }) => (
-        <Form
-          noValidate
-          onSubmit={handleSubmit}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-          className="col-12 col-md-5"
-        >
-          <div className="d-flex justify-content-center flex-row mb-4">
+        <Form noValidate onSubmit={handleSubmit} className="">
+          <div className="divNames">
             <Form.Group controlId="validationFormik01" className="w-50 me-1">
-              <Form.Label style={{ color: "red" }}>Nom*</Form.Label>
+              <Form.Label>Nom*</Form.Label>
               <Form.Control
                 type="text"
                 name="lastName"
@@ -51,7 +44,7 @@ const FormHome = () => {
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId="validationFormik02" className="w-50 ms-1">
-              <Form.Label style={{ color: "red" }}>Prénom*</Form.Label>
+              <Form.Label>Prénom*</Form.Label>
               <Form.Control
                 type="text"
                 name="firstName"
@@ -65,7 +58,7 @@ const FormHome = () => {
             </Form.Group>
           </div>
           <Form.Group controlId="validationFormik03" className="mb-4">
-            <Form.Label style={{ color: "red" }}>Téléphone*</Form.Label>
+            <Form.Label>Téléphone*</Form.Label>
             <Form.Control
               type="text"
               name="phone"
@@ -78,7 +71,7 @@ const FormHome = () => {
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group controlId="validationFormik04" className="mb-4">
-            <Form.Label style={{ color: "red" }}>Email*</Form.Label>
+            <Form.Label>Email*</Form.Label>
             <Form.Control
               type="email"
               name="email"
@@ -91,7 +84,7 @@ const FormHome = () => {
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group controlId="validationFormik05">
-            <Form.Label style={{ color: "red" }}>Message*</Form.Label>
+            <Form.Label>Message*</Form.Label>
             <p>
               Détaillez votre demande : Quel type de vêtements, quel type de
               marquage, quels sont vos besoins, la quantitée etc...
@@ -105,14 +98,8 @@ const FormHome = () => {
             />
             <Form.Control.Feedback>{errors.message}</Form.Control.Feedback>
           </Form.Group>
-          <div className="mt-5 d-flex justify-content-center">
-            <ButtonList
-              colorButton="brun"
-              textButton="Envoyer"
-              classButton="border"
-              typeButton="submit"
-              styleButton="send"
-            />
+          <div className="divButton">
+            <Button type="submit">Envoyer</Button>
           </div>
         </Form>
       )}

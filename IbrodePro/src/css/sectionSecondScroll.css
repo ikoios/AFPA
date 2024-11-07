@@ -1,0 +1,57 @@
+.containerSectionSecondScroll {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+
+.logo {
+    margin-bottom: 5vh;
+}
+
+.divSectionSecondScroll {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+    width: 80%;
+}
+
+.divCard {
+    width: 30%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+
+.cardSectionSecondScroll {
+    background-color: rgb(239, 239, 238) !important;
+    border: none !important;
+    margin-bottom: 5vh;
+}
+
+.titleCard {
+    font-size: 50px !important;
+    text-align: center;
+    margin-bottom: 5vh !important;
+}
+
+.textCard {
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+.imgCertified {
+    width: 25%;
+    margin-bottom: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+    .divTextSectionSecondScroll {
+        width: 95%;
+    }
+
+    .divCard {
+        width: 100%;
+    }
+}

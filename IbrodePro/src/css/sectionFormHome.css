@@ -1,0 +1,20 @@
+.containerSectionFormHome {
+    margin-top: 30vh;
+}
+
+.divSectionFormHome {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.divFormHome {
+    width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+    .divFormHome {
+        width: 100%;
+    }
+}

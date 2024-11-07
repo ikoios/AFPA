@@ -1,0 +1,91 @@
+.divTrapezeBanner {
+    width: 100%;
+    height: 86.5vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+    background-color: rgb(239, 239, 238);
+}
+
+.containerBanner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 15rem;
+}
+
+.textBanner {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.textBanner h1 {
+    font-size: 50px;
+}
+
+.divBanner {
+    display: flex;
+    align-items: center;
+    width: 65%;
+}
+
+.divBannerButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divBannerButton Button {
+    background: rgb(163, 130, 108);
+    border: none;
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.divBannerButton Button:hover {
+    background: rgb(163, 120, 98);
+    border: none;
+}
+
+.divBannerImage {
+    display: flex;
+    justify-content: center;
+}
+
+.divBannerImage img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+@media screen and (max-width: 1400px) {
+    .divBanner {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .divBanner {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .divBanner {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .textBanner h1 {
+        font-size: 30px;
+    }
+
+    .divBanner {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .divBanner {
+        width: 100%;
+    }
+}

@@ -4,8 +4,10 @@ import * as datas from "../datas/Datas";
 import img_certified from "../assets/certified.png";
 import DOMPurify from "dompurify";
 import parse from "html-react-parser";
+import "../css/sectionSecondScroll.css";
+import { Card } from "react-bootstrap";
 
-const SectionSecondScroll = ({ slideInElem, slideInElemDelay }) => {
+const SectionSecondScroll = ({ datas, slideInElem, slideInElemDelay }) => {
   useEffect(() => {
     slideInElem("#slide-in-elem-secondScroll");
   }, []);
@@ -15,43 +17,34 @@ const SectionSecondScroll = ({ slideInElem, slideInElemDelay }) => {
   }, []);
 
   return (
-    <div
-      className="d-flex align-items-center flex-column container"
-      style={{ marginTop: "20vh" }}
-    >
+    <div className="containerSectionSecondScroll">
       <img
         src={img_logo}
         alt="ibrodepro-logo"
         id="slide-in-elem-secondScroll"
-        style={{ marginBottom: "5vh" }}
+        className="logo"
       />
-      <div className="d-flex justify-content-center mb-5 row">
-        {Object.entries(datas.datasSecondScroll).map(([key, value]) => (
-          <div key={key} className="col-12 col-md-4 mb-5">
-            <p
-              className="fs-1 text-center mb-5"
-              id="slide-in-elem-secondScroll-delay"
-            >
-              <strong>{value.title}</strong>
-            </p>
-            <p
-              className="fs-5 fw-lighter"
-              id="slide-in-elem-secondScroll-delay"
-            >
-              {parse(DOMPurify.sanitize(value.text1))}
-            </p>
-            <p
-              className="fs-5 fw-lighter"
-              id="slide-in-elem-secondScroll-delay"
-            >
-              {parse(DOMPurify.sanitize(value.text2))}
-            </p>
-            <p
-              className="fs-5 fw-lighter"
-              id="slide-in-elem-secondScroll-delay"
-            >
-              {parse(DOMPurify.sanitize(value.text3))}
-            </p>
+      <div className="divSectionSecondScroll">
+        {datas.map((item, i) => (
+          <div key={i} className="divCard">
+            <Card className="cardSectionSecondScroll">
+              <Card.Title
+                className="titleCard"
+                id="slide-in-elem-secondScroll-delay"
+              >
+                <strong>{item.title}</strong>
+              </Card.Title>
+
+              {item.text.map((txt, y) => (
+                <Card.Text
+                  className="textCard"
+                  key={y}
+                  id="slide-in-elem-secondScroll-delay"
+                >
+                  {parse(DOMPurify.sanitize(txt))}
+                </Card.Text>
+              ))}
+            </Card>
           </div>
         ))}
       </div>
@@ -59,7 +52,7 @@ const SectionSecondScroll = ({ slideInElem, slideInElemDelay }) => {
         src={img_certified}
         alt="logo-certifié"
         id="slide-in-elem-secondScroll-delay"
-        style={{ width: "25%", marginBottom: "10vh" }}
+        className="imgCertified"
       />
     </div>
   );

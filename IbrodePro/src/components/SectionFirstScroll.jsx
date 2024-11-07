@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import * as datas from "../datas/Datas";
+import "../css/sectionFirstScroll.css";
 
-const SectionFirstScroll = ({ slideInElem, slideInElemDelay }) => {
+const SectionFirstScroll = ({ datas, slideInElem, slideInElemDelay }) => {
   useEffect(() => {
     slideInElem("#slide-in-elem");
   }, []);
@@ -11,31 +11,20 @@ const SectionFirstScroll = ({ slideInElem, slideInElemDelay }) => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        flexWrap: "wrap",
-        marginTop: "4rem",
-      }}
-    >
-      {Object.entries(datas.datasFirstScroll).map(([key, value]) => (
-        <div
-          className="d-flex align-items-center flex-column flex-wrap text-center"
-          style={{ width: "22rem" }}
-          key={key}
-        >
+    <div className="containerSectionFisrtScroll">
+      {datas.map((item, i) => (
+        <div key={i}>
           <img
-            src={value.src}
-            alt={`Image ${key}`}
-            style={value.style}
+            src={item.src}
+            alt={`Image ${item}`}
+            style={item.style}
             id="slide-in-elem"
           />
-          <p className={value.classTitle} id="slide-in-elem-delay">
-            <strong>{value.title}</strong>
-          </p>
-          <p className={value.classText} id="slide-in-elem-delay">
-            {value.text}
+          <h2 className={item.classTitle} id="slide-in-elem-delay">
+            <strong>{item.title}</strong>
+          </h2>
+          <p id="slide-in-elem-delay">
+            {item.text}
           </p>
         </div>
       ))}

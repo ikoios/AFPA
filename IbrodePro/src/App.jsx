@@ -5,7 +5,8 @@ import SectionFormHome from "./components/SectionFormHome";
 import SectionSecondScroll from "./components/SectionSecondScroll";
 import SectionCarousel from "./components/SectionCarousel";
 import { slideInElem, slideInElemDelay } from "./components/Animations";
-import * as datas from "./datas/Datas"
+import * as datas from "./datas/Datas";
+import "./css/app.css";
 
 function App() {
   return (
@@ -13,31 +14,23 @@ function App() {
       <NavBar />
       <Banner />
       <SectionFirstScroll
+        datas={datas.datasFirstScroll}
         slideInElem={slideInElem}
         slideInElemDelay={slideInElemDelay}
       />
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          width: "100%",
-          height: "auto",
-          clipPath: "polygon(0 0, 100% 5%, 100% 100%, 0% 100%)",
-          backgroundColor: "rgb(239, 239, 238)",
-          borderBottomLeftRadius: "100% 500px",
-          borderBottomRightRadius: "100% 500px",
-        }}
-      >
+      <div className="divTrapezeApp">
         <SectionFormHome
+          datas={datas.datasForm}
           slideInElem={slideInElem}
           slideInElemDelay={slideInElemDelay}
         />
         <SectionSecondScroll
+          datas={datas.datasSecondScroll}
           slideInElem={slideInElem}
           slideInElemDelay={slideInElemDelay}
         />
       </div>
-      <SectionCarousel items={datas.carousel} visibility={4} />
+      <SectionCarousel items={datas.datasCarousel} />
     </>
   );
 }
