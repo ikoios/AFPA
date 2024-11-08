@@ -7,8 +7,8 @@ const NavBar = () => {
   const links = {
     Accueil: "/",
     Broderie: "broderie",
-    Realisations: "nos-realisations",
-    Devis: "demande-in-devis",
+    Realisations: "realisations",
+    Devis: "devis",
   };
 
   return (

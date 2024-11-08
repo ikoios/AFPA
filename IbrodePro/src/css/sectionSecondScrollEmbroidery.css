@@ -1,11 +1,14 @@
 .containerSecondScrollEmbroidery {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-top: 20vh;
 }
 
 .divSecondScrollEmbroidery {
     width: 25%;
+    min-width: 25rem;
+    margin-bottom: 2vh;
 }
 
 .divSecondScrollEmbroidery h2 {
@@ -24,4 +27,10 @@
     font-size: 19px;
     font-weight: lighter;
     margin-bottom: 4vh;
+}
+
+@media screen and (max-width: 768px) {
+    .divSecondScrollEmbroidery {
+        width: 90%;
+    }
 }

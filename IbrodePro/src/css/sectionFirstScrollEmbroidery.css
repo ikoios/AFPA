@@ -1,12 +1,13 @@
 .containerFirstScrollEmbroidery {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-top: 15vh;
 }
 
 .cardFirstScrollEmbroidery {
-    width: 30%;
+    width: 30vw;
+    min-width: 30rem;
     border: none !important;
 }
 
@@ -22,6 +23,20 @@
 
 .imgFirstScrollEmbroidery {
     width: 30vw;
+    min-width: 30rem;
     height: 50vh;
     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .cardFirstScrollEmbroidery {
+        width: 100%;
+        min-width: 0;
+        border: none !important;
+    }
+
+    .imgFirstScrollEmbroidery {
+        width: 100%;
+        min-width: 0;
+    }
 }
