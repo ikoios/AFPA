@@ -99,7 +99,7 @@ const SectionCarousel = ({ items }) => {
     centerMode: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 576,
@@ -132,7 +132,7 @@ const SectionCarousel = ({ items }) => {
           infinite: true,
           speed: 500,
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -143,7 +143,7 @@ const SectionCarousel = ({ items }) => {
           infinite: true,
           speed: 500,
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -154,7 +154,7 @@ const SectionCarousel = ({ items }) => {
           infinite: true,
           speed: 500,
           slidesToShow: 4,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -165,7 +165,7 @@ const SectionCarousel = ({ items }) => {
           infinite: true,
           speed: 500,
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         },
       },
     ],

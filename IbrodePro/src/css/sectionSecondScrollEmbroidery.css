@@ -1,0 +1,27 @@
+.containerSecondScrollEmbroidery {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20vh;
+}
+
+.divSecondScrollEmbroidery {
+    width: 25%;
+}
+
+.divSecondScrollEmbroidery h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+.divSecondScrollEmbroidery h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 4vh;
+}
+
+.divSecondScrollEmbroidery p {
+    font-size: 19px;
+    font-weight: lighter;
+    margin-bottom: 4vh;
+}

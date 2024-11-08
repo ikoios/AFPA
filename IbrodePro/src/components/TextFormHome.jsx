@@ -15,8 +15,12 @@ const TextFormHome = ({ datas, slideInElem, slideInElemDelay }) => {
   return (
     <div className="containerTextFormHome">
       <Card id="cardTest">
-        <Card.Title style={datas.styleTitle}>{datas.title}</Card.Title>
-        <Card.Text style={datas.styleText}>{datas.text1}</Card.Text>
+        <Card.Title style={datas.styleTitle} id="slide-in-elem-textForm">
+          {datas.title}
+        </Card.Title>
+        <Card.Text style={datas.styleText} id="slide-in-elem-textForm-delay">
+          {datas.text1}
+        </Card.Text>
         <Card.Img
           style={datas.styleImage}
           src={datas.src}

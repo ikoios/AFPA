@@ -17,3 +17,11 @@
     right: 3% !important;
     z-index: 1;
 }
+
+.titleCarousel {
+    width: 20rem;
+}
+
+.textCarousel {
+    width: 20rem;
+}

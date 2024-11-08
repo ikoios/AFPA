@@ -1,13 +1,14 @@
 import { Nav } from "react-bootstrap";
 import ButtonList from "../ButtonList";
 import img_logo from "../../assets/Ibrode_logo.png";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const links = {
     Accueil: "/",
     Broderie: "broderie",
     Realisations: "nos-realisations",
-    Devis: "demande-in-devis"
+    Devis: "demande-in-devis",
   };
 
   return (
@@ -17,9 +18,9 @@ const NavBar = () => {
       </Nav.Item>
       {Object.entries(links).map(([key, value]) => (
         <Nav.Item key={key}>
-          <Nav.Link href={value} className="text-black fs-5">
+          <Link to={value} className="text-black fs-5">
             {key}
-          </Nav.Link>
+          </Link>
         </Nav.Item>
       ))}
       <Nav.Item className="w-50 d-flex justify-content-end">

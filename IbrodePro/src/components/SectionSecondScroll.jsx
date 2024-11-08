@@ -28,12 +28,9 @@ const SectionSecondScroll = ({ datas, slideInElem, slideInElemDelay }) => {
         {datas.map((item, i) => (
           <div key={i} className="divCard">
             <Card className="cardSectionSecondScroll">
-              <Card.Title
-                className="titleCard"
-                id="slide-in-elem-secondScroll-delay"
-              >
+              <h2 className="titleCard" id="slide-in-elem-secondScroll-delay">
                 <strong>{item.title}</strong>
-              </Card.Title>
+              </h2>
 
               {item.text.map((txt, y) => (
                 <Card.Text

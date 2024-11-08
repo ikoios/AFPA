@@ -3,6 +3,15 @@ import img_embroidery from "../assets/embroidery.jpg";
 import img_stock from "../assets/stock.jpg";
 import img_marking from "../assets/marking.jpeg";
 import img_contact from "../assets/contact.jpg";
+import img_sos from "../assets/sos-oxygene.jpeg";
+import img_multi_carts from "../assets/multi-carts.jpeg";
+import img_heineken from "../assets/heineken.jpeg";
+import img_gsl from "../assets/gsl.jpeg";
+import img_france_alarme from "../assets/france-alarme.jpeg";
+import img_evrard from "../assets/evrard.jpeg";
+import img_labbaye from "../assets/labbaye.png";
+import img_la_chicoree from "../assets/la-chicoree.jpeg";
+import img_tsm from "../assets/tsm.jpeg";
 
 export const datasFirstScroll = [
   {
@@ -137,5 +146,74 @@ export const datasCarousel = [
     src: "https://images.squarespace-cdn.com/content/v1/64c250b782485e77d63a7fa0/e2c68515-be76-4aa3-86be-dd4a458a5104/DK0A4XT4_m_4570469.png",
     title: "Combinaisan",
     text: "Combinaison de travail robuste et confortable, conçue pour résister aux conditions les plus exigeantes. Fabirquée avec des matériaux durables, elle offre une protection optimale tout en permettant une grande liberté de mouvement. Disponible en plusieurs tailles et couleurs, avec  options de marquage personnalisées",
+  },
+];
+
+export const datasFirstScrollEmbroidery = [
+  {
+    title: "La broderie",
+    text: [
+      "Pour les professionnels soucieux de se démarquer, la broderie offre une combinaison inégalée de sophistication et de robustesse.",
+      "En intégrant des motifs élégants ou des logos distinctifs avec des fils méticuleusement entrelacés, cette technique donne du relief à vos uniformes et tenues de travail.",
+      "Avec sa remarquable durabilité, la broderie est un choix judicieux pour ceux qui font face aux défis du monde professionnel et cherchent à préserver une image impeccable sur le long terme.",
+      "Que vous soyez dans le secteur de l’hôtellerie, de la santé, ou de la construction, la broderie élève  votre marque en ajoutant une touche de classe et de résilience à votre garde-robe professionnelle.",
+    ],
+  },
+];
+
+export const datasSecondScrollEmbroidery = [
+  {
+    title: "Les Avantages",
+    list: [
+      {
+        titleList: "Relief et elegance",
+        textList:
+          "La broderie est la technique de marquage qui offre le rendu le plus qualitatif. Possible sur les textiles avec un grammage supérieur à 180g/m, la broderie personnalisée sublime le textile avec style et élégance. Sur certains textiles plus rigides comme les casquettes, Nous vous proposons une grande variété de fils et d'accessoires pour réaliser tous vos projets de broderie.",
+      },
+      {
+        titleList: "Couleurs et effet",
+        textList:
+          "Le parc machine de notre entreprise permet de réaliser des visuels en broderie jusqu'à 15 couleurs. Nous cherchons parmi notre gamme de fils les couleurs qui se rapprochent le plus de celles de votre visuel pour vous garantir une reproduction finale la plus identique possible.",
+      },
+      {
+        titleList: "Indestructible",
+        textList:
+          "La broderie est la méthode de personnalisation textile la plus résistante. La broderie donne un résultat très qualitatif et ne s'use pas dans le temps. La composition du fil, ainsi que la réalisation de la broderie assurent une très longue tenue aux lavages (lavable à 90°).",
+      },
+    ],
+  },
+  {
+    title: "Les conditions",
+    list: [
+      {
+        titleList: "Votre logo",
+        textList:
+          "Pour que la broderie de votre logo soit impeccable, quelques conditions sont essentielles : assurez-vous que le logo soit réalisable en fil et que l'image soit vectorisée. Pas d'inquiétude, notre équipe peut le créer en interne si nécessaire, pour garantir un rendu parfait sur vos vêtements professionnels. Faites confiance à notre expertise en broderie pour valoriser votre identité de marque avec finesse et précision.",
+      },
+      {
+        titleList: "16 pieces minimum",
+        textList:
+          "Pour éviter les frais de surcoût, nous acceptons toutes commandes à partir de 6 pièces commandées chez nous, avec ou non une broderie a effectuée",
+      },
+      {
+        titleList: "taille & emplacement",
+        textList:
+          "Le logo doit faire entre 4 et 22 cm maximum de largeur et longueur. Selon les vêtements il y a plusieurs zone possible de broderie.",
+      },
+    ],
+  },
+];
+
+export const datasRealisations = [
+  {
+    sos_oxygene: img_sos,
+    multi_chariots: img_multi_carts,
+    heineken: img_heineken,
+    gsl: img_gsl,
+    france_alarmes: img_france_alarme,
+    evrard: img_evrard,
+    labbaye: img_labbaye,
+    la_chicoree: img_la_chicoree,
+    tsm: img_tsm,
   },
 ];
