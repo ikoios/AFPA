@@ -1,0 +1,18 @@
+.containerMentions {
+    margin-top: 10vh;
+}
+
+.containerMentions h2 {
+    font-size: 50px;
+    margin-bottom: 5vh;
+}
+
+.containerMentions h5 {
+    font-size: 30px;
+    margin-bottom: 2vh;
+}
+
+.containerMentions p {
+    font-size: 19px;
+    font-weight: lighter;
+}

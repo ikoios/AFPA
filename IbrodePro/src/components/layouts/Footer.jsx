@@ -1,13 +1,21 @@
-import { Card } from "react-bootstrap";
 import "../../css/footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const links = {
+    "Mentions légales": "mentions",
+    "Satisfait, échangé ou remboursé": "satisfait",
+  };
+
   return (
     <div className="footer">
-      <h2 className="titleFooter">INFORMATIONS</h2>
+      <h2 className="titleFooter">Informations</h2>
       <div className="bodyFooter">
-        <a className="linkFooter">Mentions légales</a>
-        <a className="linkFooter">Satisfait, échangé ou remboursé</a>
+        {Object.entries(links).map(([key, value]) => (
+          <Link key={key} to={value} className="linkFooter">
+            {key}
+          </Link>
+        ))}
       </div>
     </div>
   );

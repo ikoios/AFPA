@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 .cardFirstScrollEmbroidery {
     width: 30vw;
     min-width: 30rem;
     border: none !important;
+    margin-bottom: 5vh;
 }
 
 .titleFirstScrollEmbroidery {

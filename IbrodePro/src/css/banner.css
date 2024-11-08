@@ -39,6 +39,9 @@
     border: none;
     width: 60%;
     margin-bottom: 5%;
+    color: white;
+    border-radius: 5px;
+    height: 4vh;
 }
 
 .divBannerButton Button:hover {

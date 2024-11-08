@@ -1,5 +1,4 @@
 import img_home from "../assets/img-home.jpg";
-import { Button } from "react-bootstrap";
 import "../css/banner.css";
 
 const Banner = () => {
@@ -20,8 +19,8 @@ const Banner = () => {
         </div>
         <div className="divBanner row">
           <div className="divBannerButton col-12 col-md-6">
-            <Button>Contactez-nous directement</Button>
-            <Button>Notre catalogue</Button>
+            <button>Contactez-nous directement</button>
+            <button>Notre catalogue</button>
           </div>
           <div className="divBannerImage col-12 col-md-6">
             <img src={img_home} alt="technicien-de-surface" />

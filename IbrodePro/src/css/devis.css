@@ -1,0 +1,29 @@
+.containerDevis {
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(239, 239, 238);
+    margin-bottom: 0 !important;
+}
+
+.divFormDevis {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+    width: 70%;
+}
+
+.divFormHome {
+    width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .divFormDevis {
+        width: 95%;
+    }
+
+    .divFormHome {
+        width: 100%;
+    }
+}

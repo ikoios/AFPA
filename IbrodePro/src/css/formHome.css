@@ -27,6 +27,8 @@ label {
     padding-left: 10%;
     padding-right: 10%;
     height: 5rem;
+    color: white;
+    border-radius: 5px;
 }
 
 .divButton Button:hover {

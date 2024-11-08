@@ -1,0 +1,70 @@
+.cardTextFormDevis {
+    border: none !important;
+    width: 45%;
+    background-color: rgb(239, 239, 238) !important;
+}
+
+.titleTextFormDevis {
+    font-size: 80px;
+    margin-bottom: 2vh;
+}
+
+.secondTitleTextFormDevis {
+    font-size: 50px !important;
+    margin-bottom: 5vh !important;
+}
+
+.textFormDevis {
+    font-size: 19px;
+    font-weight: lighter;
+    margin-bottom: 10vh;
+}
+
+.divInformation {
+    display: flex;
+    flex-direction: column;
+}
+
+.divLink {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+
+.divTel {
+    margin-bottom: 5vh;
+}
+
+.linkFormDevis {
+    font-size: 19px;
+    color: rgb(163, 130, 108);
+}
+
+.linkMailFormDevis {
+    font-size: 19px;
+    color: rgb(163, 130, 108);
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 768px) {
+    .cardTextFormDevis {
+        width: 100%;
+    }
+
+    .divInformation {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .timetableFormDevis {
+        width: 47%;
+    }
+
+    .divLink {
+        width: 47%;
+    }
+}

@@ -1,7 +1,6 @@
 import * as formik from "formik";
-import { Button, Form } from "react-bootstrap";
 import * as yup from "yup";
-import ButtonList from "./ButtonList";
+import { Form } from "react-bootstrap";
 import "../css/formHome.css";
 
 const FormHome = () => {
@@ -99,7 +98,7 @@ const FormHome = () => {
             <Form.Control.Feedback>{errors.message}</Form.Control.Feedback>
           </Form.Group>
           <div className="divButton">
-            <Button type="submit">Envoyer</Button>
+            <button type="submit">Envoyer</button>
           </div>
         </Form>
       )}

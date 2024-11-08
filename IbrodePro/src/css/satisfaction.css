@@ -1,0 +1,17 @@
+.containerSatisfaction {
+    margin-top: 10vh;
+}
+
+.containerSatisfaction h2 {
+    font-size: 50px;
+    margin-bottom: 5vh;
+}
+
+.containerSatisfaction p {
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+.containerSatisfaction a {
+    color: rgb(163, 130, 108);
+}
