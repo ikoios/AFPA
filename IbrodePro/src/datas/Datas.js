@@ -206,14 +206,39 @@ export const datasSecondScrollEmbroidery = [
 
 export const datasRealisations = [
   {
-    sos_oxygene: img_sos,
-    multi_chariots: img_multi_carts,
-    heineken: img_heineken,
-    gsl: img_gsl,
-    france_alarmes: img_france_alarme,
-    evrard: img_evrard,
-    labbaye: img_labbaye,
-    la_chicoree: img_la_chicoree,
-    tsm: img_tsm,
+    item: "sos_oxygene",
+    src: img_sos,
+  },
+  {
+    item: "multi_chariots",
+    src: img_multi_carts,
+  },
+  {
+    item: "heineken",
+    src: img_heineken,
+  },
+  {
+    item: "gsl",
+    src: img_gsl,
+  },
+  {
+    item: "france_alarmes",
+    src: img_france_alarme,
+  },
+  {
+    item: "evrard",
+    src: img_evrard,
+  },
+  {
+    item: "labbaye",
+    src: img_labbaye,
+  },
+  {
+    item: "la_chicoree",
+    src: img_la_chicoree,
+  },
+  {
+    item: "tsm",
+    src: img_tsm,
   },
 ];

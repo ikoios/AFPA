@@ -1,0 +1,38 @@
+.containerRealisations {
+    margin-top: 10vh;
+}
+
+.cardRealisations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.divRealisations {
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.titleRealisations {
+    font-size: 80px;
+    margin-bottom: 20vh;
+}
+
+.imgRealisations {
+    width: 25rem;
+    margin-inline: 2vw;
+    margin-bottom: 2vh;
+}
+
+@media screen and (max-width: 768px) {
+    .titleRealisations {
+        font-size: 50px;
+    }
+
+    .imgRealisations {
+        width: 20rem;
+        margin-inline: 2vw;
+        margin-bottom: 2vh;
+    }
+}
