@@ -15,14 +15,11 @@ function App() {
       <Router
         future={{
           v7_startTransition: true,
+          v7_relativeSplatPath: true,
         }}
       >
         <NavBar />
-        <Routes
-          future={{
-            v7_startTransition: true,
-          }}
-        >
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/broderie" element={<Embroidery />} />
           <Route path="/realisations" element={<Realisations />} />

@@ -1,0 +1,72 @@
+    //   <Nav className="navbar navbar-expand-lg py-4 d-flex align-items-center justify-content-between flex-row-reverse">
+    //     <Nav.Item className="text-center">
+    //       <img src={img_logo} alt="Ibrodepro-logo" className="w-50 px-0" />
+    //     </Nav.Item>
+    //     {/* <Menu
+    //       className="burger"
+    //       isOpen={isOpen}
+    //       onChange={(isOpen) => setIsOpen(isOpen)}
+    //     >
+    //       {Object.entries(links).map(([key, value]) => (
+    //         <Link
+    //           to={value}
+    //           key={key}
+    //           className="menu-item text-black fs-5"
+    //           onClick={toggleBurgerMenu}
+    //         >
+    //           {key}
+    //         </Link>
+    //       ))}
+    //     </Menu>
+    //     {Object.entries(links).map(([key, value]) => (
+    //       <Nav.Item key={key}>
+    //         <Link to={value} className="text-black fs-5">
+    //           {key}
+    //         </Link>
+    //       </Nav.Item>
+    //     ))} */}
+    //     {isMobile ? (
+    //       <>
+    //         <Menu
+    //           style={styles}
+    //           isOpen={isOpen}
+    //           width={"55%"}
+    //           onChange={(isOpen) => setIsOpen(isOpen)}
+    //           customBurgerIcon={<CustomBurgerIcon />}
+    //           right
+    //         >
+    //           {Object.entries(links).map(([key, value]) => (
+    //             <Link
+    //               to={value}
+    //               key={key}
+    //               className="menu-item text-black fs-5"
+    //               onClick={toggleBurgerMenu}
+    //             >
+    //               {key}
+    //             </Link>
+    //           ))}
+    //           {/* {Object.entries(links).map(([key, value]) => (
+    //             <a href={value} key={key} onClick={toggleBurgerMenu}></a>
+    //           ))} */}
+    //         </Menu>
+    //       </>
+    //     ) : (
+    //       <>
+    //         {Object.entries(links).map(([key, value]) => (
+    //           <Nav.Item key={key}>
+    //             <Link to={value} className="text-black fs-5">
+    //               {key}
+    //             </Link>
+    //           </Nav.Item>
+    //         ))}
+    //         <Nav.Item className="w-50 d-flex justify-content-end">
+    //           <ButtonList
+    //             styleButton="contact"
+    //             textButton="Contactez-nous"
+    //             classButton="border me-4"
+    //             colorButton="brun"
+    //           />
+    //         </Nav.Item>
+    //       </>
+    //     )}
+    //   </Nav>
