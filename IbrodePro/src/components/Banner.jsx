@@ -25,7 +25,7 @@ const Banner = () => {
             <button>Notre catalogue</button>
           </div>
           <div className="divBannerImage col-12 col-md-6">
-            <img src={img_home} alt="technicien-de-surface" />
+            <img src={img_home} alt="technicien-de-surface" className="imgBanner" />
           </div>
         </div>
       </div>

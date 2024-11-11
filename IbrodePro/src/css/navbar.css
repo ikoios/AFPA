@@ -63,6 +63,11 @@
     margin-top: 25vh;
 }
 
+.contact a {
+    text-decoration: none;
+    color: white;
+}
+
 .container-burger {
     display: flex;
     justify-content: space-evenly;
@@ -71,6 +76,7 @@
     background-color: white;
     position: fixed;
     transition: 0.3s;
+    width: 100%;
 }
 
 .burger-button {
@@ -106,10 +112,65 @@
 }
 
 .navBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
+    width: 100%;
+}
+
+.divNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid; */
+    width: 100%;
+}
+
+.itemImg {
+    width: 15%;
+    margin-left: 5vw;
+}
+
+.imgNav {
+    width: 100%;
+}
+
+.itemLink {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: solid; */
+    width: 50%;
+}
+
+
+.linkNav {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+}
+
+.linkNav:focus {
+    border-bottom: solid 1px;
+}
+
+.contactNav {
+    background: rgb(163, 130, 108);
+    border: none;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 5px;
+    margin-right: 5vw;
+}
+
+.contactNav:hover {
+    background: rgb(163, 120, 98);
+    border: none;
+}
+
+.contactNav a {
+    text-decoration: none;
+    color: white;
 }
 
 /* Animations */

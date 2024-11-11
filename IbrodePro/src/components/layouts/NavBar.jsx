@@ -1,8 +1,7 @@
 import { Nav } from "react-bootstrap";
 import img_logo from "../../assets/Ibrode_logo.png";
-import ButtonList from "../ButtonList";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../css/navbar.css";
 
 const NavBar = ({ isMobile }) => {
@@ -21,22 +20,21 @@ const NavBar = ({ isMobile }) => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+
+    setLastScrollTop(scrollTop);
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        setShowNav(false);
-      } else {
-        setShowNav(true);
-      }
-
-      setLastScrollTop(scrollTop);
-    };
-
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollTop, isMobile]);
+  }, [lastScrollTop]);
 
   return (
     <>
@@ -74,7 +72,7 @@ const NavBar = ({ isMobile }) => {
                     <button
                       className={`contact ${isOpen ? "slide-in" : "slide-out"}`}
                     >
-                      Contactez-nous
+                      <a href="/devis">Contactez-nous</a>
                     </button>
                   </div>
                 </div>
@@ -101,24 +99,25 @@ const NavBar = ({ isMobile }) => {
           style={{ top: showNav ? "0" : "-100%" }}
         >
           <Nav className="navbar">
-            <Nav.Item className="text-center">
-              <img src={img_logo} alt="Ibrodepro-logo" className="w-50 px-0" />
-            </Nav.Item>
-            {Object.entries(links).map(([key, value]) => (
-              <Nav.Item key={key}>
-                <Link to={value} className="text-black fs-5">
-                  {key}
-                </Link>
+            <div className="divNavbar">
+              <Nav.Item className="itemImg">
+                <img src={img_logo} alt="Ibrodepro-logo" className="imgNav" />
               </Nav.Item>
-            ))}
-            <Nav.Item className="w-50 d-flex justify-content-end">
-              <ButtonList
-                styleButton="contact"
-                textButton="Contactez-nous"
-                classButton="border me-4"
-                colorButton="brun"
-              />
-            </Nav.Item>
+              <div className="itemLink">
+                {Object.entries(links).map(([key, value]) => (
+                  <Nav.Item key={key}>
+                    <Link to={value} className="linkNav">
+                      {key}
+                    </Link>
+                  </Nav.Item>
+                ))}
+              </div>
+              <Nav.Item className="itemButton">
+                <button className="contactNav">
+                  <a href="/devis">Contactez-nous</a>
+                </button>
+              </Nav.Item>
+            </div>
           </Nav>
         </div>
       )}
