@@ -11,6 +11,7 @@ const FormHome = () => {
     lastName: yup.string().required("Nom requis"),
     phone: yup.string().required("Téléphone requis"),
     email: yup.string().required("Email requis"),
+    subject: yup.string().required("Objet requis"),
     message: yup.string().required("Message requis"),
   });
 
@@ -23,6 +24,7 @@ const FormHome = () => {
         firstName: "",
         email: "",
         phone: "",
+        subject: "",
         message: "",
       }}
     >
@@ -82,7 +84,20 @@ const FormHome = () => {
               {errors.email}
             </Form.Control.Feedback>
           </Form.Group>
-          <Form.Group controlId="validationFormik05">
+          <Form.Group controlId="validationFormik05" className="mb-4">
+            <Form.Label>Objet*</Form.Label>
+            <Form.Control
+              type="text"
+              name="subject"
+              value={values.subject}
+              onChange={handleChange}
+              isInvalid={!!errors.subject}
+            />
+            <Form.Control.Feedback type="invalid">
+              {errors.subject}
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group controlId="validationFormik06">
             <Form.Label>Message*</Form.Label>
             <p>
               Détaillez votre demande : Quel type de vêtements, quel type de
