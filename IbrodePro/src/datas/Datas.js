@@ -74,11 +74,11 @@ export const datasFirstScroll = [
 
 export const datasForm = {
   title: "Gagnez du temps: contactez-nous.",
-  styleTitle: { fontSize: "50px" },
+  styleTitle: { fontSize: "50px", marginBottom: "3vh" },
   text1:
     "Votre temps est précieux, contactez-nous directement et laissez nos experts vous guider dans votre projet. C’est simple, efficace et adapté à vos besoins.",
   text2: "Discutons directement de vos besoins.",
-  styleText: { fontSize: "19px", fontWeight: "lighter" },
+  styleText: { fontSize: "19px", fontWeight: "lighter", marginBottom: "3vh" },
   item: "contact",
   src: img_contact,
   styleImage: {

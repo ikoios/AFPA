@@ -6,15 +6,13 @@ import { Card } from "react-bootstrap";
 const TextFormHome = ({ datas, slideInElem, slideInElemDelay }) => {
   useEffect(() => {
     slideInElem("#slide-in-elem-textForm");
-  }, []);
-
-  useEffect(() => {
     slideInElemDelay("#slide-in-elem-textForm-delay");
+    slideInElemDelay("#slide-in-elem-textForm-delay2");
   }, []);
 
   return (
     <div className="containerTextFormHome">
-      <Card id="cardTest">
+      <Card id="card">
         <Card.Title style={datas.styleTitle} id="slide-in-elem-textForm">
           {datas.title}
         </Card.Title>
@@ -25,6 +23,7 @@ const TextFormHome = ({ datas, slideInElem, slideInElemDelay }) => {
           style={datas.styleImage}
           src={datas.src}
           alt={`Image ${datas.item}`}
+          id="slide-in-elem-textForm-delay2"
         />
       </Card>
     </div>

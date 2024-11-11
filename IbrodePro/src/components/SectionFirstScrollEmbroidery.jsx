@@ -10,8 +10,6 @@ const SectionFirstScrollEmbroidery = ({
 }) => {
   useEffect(() => {
     slideInElem("#slide-in-elem-firstScroll-embroidery");
-  }, []);
-  useEffect(() => {
     slideInElemDelay("#slide-in-elem-firstScroll-embroidery-delay");
   }, []);
 

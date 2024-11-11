@@ -1,10 +1,14 @@
 .containerMentions {
-    margin-top: 10vh;
+    padding-top: 20vh;
 }
 
 .containerMentions h2 {
     font-size: 50px;
     margin-bottom: 5vh;
+}
+
+.containerMentions li {
+    list-style-type: decimal;
 }
 
 .containerMentions h5 {

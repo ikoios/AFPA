@@ -3,7 +3,11 @@ import TextFormHome from "./TextFormHome";
 import FormHome from "./FormHome";
 import "../css/sectionFormHome.css";
 
-const SectionFormHome = ({ datas, slideInElem, slideInElemDelay }) => {
+const SectionFormHome = ({
+  datas,
+  slideInElem,
+  slideInElemDelay,
+}) => {
   return (
     <Container className="containerSectionFormHome">
       <div className="divSectionFormHome">

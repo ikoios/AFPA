@@ -5,12 +5,14 @@ import SectionSecondScroll from "../components/SectionSecondScroll";
 import SectionCarousel from "../components/SectionCarousel";
 import { slideInElem, slideInElemDelay } from "../animations/Animations";
 import * as datas from "../datas/Datas";
+import "../css/home.css";
 
-const Home = () => {
+const Home = ({ isMobile }) => {
   return (
     <>
       <Banner />
       <SectionFirstScroll
+        isMobile={isMobile}
         datas={datas.datasFirstScroll}
         slideInElem={slideInElem}
         slideInElemDelay={slideInElemDelay}
@@ -22,6 +24,7 @@ const Home = () => {
           slideInElemDelay={slideInElemDelay}
         />
         <SectionSecondScroll
+          isMobile={isMobile}
           datas={datas.datasSecondScroll}
           slideInElem={slideInElem}
           slideInElemDelay={slideInElemDelay}

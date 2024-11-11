@@ -7,30 +7,15 @@ import "../css/realisations.css";
 const Realisations = () => {
   useEffect(() => {
     slideInElem("#slide-in-elem-realisations");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations1-delay");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations2-delay");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations3-delay");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations4-delay");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations5-delay");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations6-delay");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations7-delay");
-  }, []);
-  useEffect(() => {
-    slideInElemDelay("#slide-in-elem-realisations8-delay");
+    slideInElemDelay("#slide-in-elem-realisations-delay0");
+    slideInElemDelay("#slide-in-elem-realisations-delay1");
+    slideInElemDelay("#slide-in-elem-realisations-delay2");
+    slideInElemDelay("#slide-in-elem-realisations-delay3");
+    slideInElemDelay("#slide-in-elem-realisations-delay4");
+    slideInElemDelay("#slide-in-elem-realisations-delay5");
+    slideInElemDelay("#slide-in-elem-realisations-delay6");
+    slideInElemDelay("#slide-in-elem-realisations-delay7");
+    slideInElemDelay("#slide-in-elem-realisations-delay8");
   }, []);
 
   return (
@@ -46,7 +31,7 @@ const Realisations = () => {
               src={items.src}
               alt={`Logo ${items.item}`}
               className="imgRealisations"
-              id={`slide-in-elem-realisations${i}-delay`}
+              id={`slide-in-elem-realisations-delay${i}`}
             />
           ))}
         </div>

@@ -4,7 +4,7 @@ import SectionSecondScrollEmbroidery from "../components/sectionSecondScrollEmbr
 import * as datas from "../datas/Datas";
 import { slideInElem, slideInElemDelay } from "../animations/Animations";
 
-const Embroidery = () => {
+const Embroidery = ({ isMobile }) => {
   return (
     <>
       <BannerEmbroidery />
@@ -14,6 +14,7 @@ const Embroidery = () => {
         slideInElemDelay={slideInElemDelay}
       />
       <SectionSecondScrollEmbroidery
+        isMobile={isMobile}
         datas={datas.datasSecondScrollEmbroidery}
         slideInElem={slideInElem}
         slideInElemDelay={slideInElemDelay}

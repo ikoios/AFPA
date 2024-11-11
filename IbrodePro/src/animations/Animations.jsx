@@ -10,27 +10,7 @@ export const slideInElem = (elem) => {
     elem,
     {
       opacity: 0,
-      y: 200
-    },
-    {
-      opacity: 1,
-      y: 0,
-      scrollTrigger: {
-        trigger: elem,
-        end: "bottom center"
-      }
-    }
-  );
-};
-
-
-// Same Animation with delay
-export const slideInElemDelay = (elem) => {
-  gsap.fromTo(
-    elem,
-    {
-      opacity: 0,
-      y: 200
+      y: 200,
     },
     {
       opacity: 1,
@@ -38,8 +18,27 @@ export const slideInElemDelay = (elem) => {
       scrollTrigger: {
         trigger: elem,
         end: "bottom center",
-        delay: 0.5
-      }
+      },
+    }
+  );
+};
+
+// Same Animation with delay
+export const slideInElemDelay = (elem) => {
+  gsap.fromTo(
+    elem,
+    {
+      opacity: 0,
+      y: 200,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: elem,
+        end: "bottom center",
+      },
     }
   );
 };

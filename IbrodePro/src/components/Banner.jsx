@@ -19,7 +19,9 @@ const Banner = () => {
         </div>
         <div className="divBanner row">
           <div className="divBannerButton col-12 col-md-6">
-            <button>Contactez-nous directement</button>
+            <button>
+              <a href="/devis">Contactez-nous directement</a>
+            </button>
             <button>Notre catalogue</button>
           </div>
           <div className="divBannerImage col-12 col-md-6">

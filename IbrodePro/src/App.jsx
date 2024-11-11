@@ -7,9 +7,12 @@ import Mentions from "./views/Mentions";
 import Satisfaction from "./views/Satisfaction";
 import Footer from "./components/layouts/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import "./css/app.css";
 
 function App() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   return (
     <>
       <Router
@@ -18,10 +21,13 @@ function App() {
           v7_relativeSplatPath: true,
         }}
       >
-        <NavBar />
+        <NavBar isMobile={isMobile} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/broderie" element={<Embroidery />} />
+          <Route path="/" element={<Home isMobile={isMobile} />} />
+          <Route
+            path="/broderie"
+            element={<Embroidery isMobile={isMobile} />}
+          />
           <Route path="/realisations" element={<Realisations />} />
           <Route path="/devis" element={<Devis />} />
           <Route path="/mentions" element={<Mentions />} />

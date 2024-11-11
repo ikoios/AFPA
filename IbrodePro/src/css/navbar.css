@@ -1,5 +1,5 @@
 .menu-wrapper {
-    position: relative;
+    position: fixed;
     z-index: 1;
 }
 
@@ -20,6 +20,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 13vh;
+    background: rgb(239, 239, 238);
 }
 
 .close-button {
@@ -33,7 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    margin-top: 20vh;
+    margin-top: 25vh;
 }
 
 .menu-item {
@@ -52,9 +53,9 @@
 .contact {
     background: rgb(163, 130, 108);
     border: none;
-    padding-left: 15%;
-    padding-right: 15%;
-    height: 8rem;
+    padding-left: 12%;
+    padding-right: 12%;
+    height: 7rem;
     color: white;
     border-radius: 5px;
     font-size: 19px;
@@ -67,6 +68,9 @@
     justify-content: space-evenly;
     align-items: center;
     height: 13vh;
+    background-color: white;
+    position: fixed;
+    transition: 0.3s;
 }
 
 .burger-button {
@@ -87,6 +91,25 @@
     height: 2px;
     margin-bottom: 4px;
     background-color: black;
+}
+
+/* Navbar */
+
+.containerNavbar {
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    padding-top: 1.6vh;
+    padding-bottom: 1.6vh;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
 }
 
 /* Animations */
@@ -135,9 +158,8 @@
     }
 }
 
-
 .menu-content {
-    animation-duration: 0.8s;
+    animation-duration: 0.5s;
 }
 
 .menu-content.fade-in {
